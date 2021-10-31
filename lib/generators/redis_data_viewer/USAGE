@@ -1,0 +1,5 @@
+Description:
+    Run this generator to setup initial configuration
+
+Example:
+    rails generate redis_data_viewer install

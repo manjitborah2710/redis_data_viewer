@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Result</title>
+	<style type="text/css">
+		#container-div{
+			margin: 10px auto;
+			padding: 20px;
+		}
+		#f{
+			text-align: center;
+		}
+		#result{
+			display: block;
+			height: 300px;
+			width: 100%;
+			overflow-y: scroll;
+			resize: none;
+			margin-top: 15px;
+		}
+		#title{
+			width: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="container-div">
+		<h2 id="title">Redis Database</h2>
+		<%= form_tag(get_data_path, method: :get, id: 'f') do %>
+			<%= label_tag :key, "Key to search"%>
+			<%= text_field_tag :key %>
+
+			<%= label_tag :db, "Redis DB index"%>
+			<%= number_field :redis, :db, :min => 0 %>
+
+			<%= submit_tag "Fetch" %>
+		<% end %>
+		<hr>
+		<%= text_area_tag :result, '',:readonly => true %>
+	</div>
+
+	<script type="text/javascript">
+		$('#f').on('submit', (e) =>{
+			e.preventDefault();
+			callAction();
+		})
+
+		function callAction(){
+			$.ajax({
+				type: "get",
+				url: "<%= get_data_path %>",
+				contentType: "application/json; charset=utf-8",
+				data: {key: $('#key').val(), db: $('#redis_db').val()},
+				success: function(result){
+					console.log("response received !!")
+					console.log(result)
+					console.log(result.data)
+					$('#result').val(JSON.stringify(result.data))
+				}
+			})
+		}
+	</script>
+</body>
+</html>
