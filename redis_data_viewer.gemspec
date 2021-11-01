@@ -7,11 +7,11 @@ require 'redis_data_viewer/version'
 Gem::Specification.new do |s|
   s.name        = 'redis_data_viewer'
   s.version     = RedisDataViewer::VERSION
-  s.authors     = ['Manjit']
-  s.email       = ['manjit.borah@box8.in']
-  s.homepage    = ''
-  s.summary     = 'Summary of RedisDataViewer.'
-  s.description = 'Description of RedisDataViewer.'
+  s.authors     = ['Manjit Borah']
+  s.email       = ['manjitborah2710@gmail.com']
+  s.homepage    = 'https://manjitborah2710.github.io/redis_data_viewer/'
+  s.summary     = 'A gem that lets you see redis data in your rails application. It helps you view the data in your redis in a readonly mode. This prevents accidental changes in your datastore.'
+  s.description = ''
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']

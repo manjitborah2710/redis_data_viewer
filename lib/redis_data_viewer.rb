@@ -17,7 +17,7 @@ module RedisDataViewer
   end
 
   def self.redis_client
-    @client ||= Redis.new(host: setup_data.redis_host, port: setup_data.redis_port)
+    @client ||= Redis.new(host: setup_data.redis_host, port: setup_data.redis_port, password: setup_data.redis_password || '')
   end
 
 end
