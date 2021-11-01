@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Redis Data Viewer</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<style rel='stylesheet' type="text/css">
+		.title-text{
+			margin: 20px;
+		}
+		#instructions{
+			font-size: 18px;
+		}
+		#sample-img{
+			height: 100%;
+			width: 100%;
+		}
+		.link-btn{
+			padding: 10px;
+			margin: 5px;
+			text-decoration: none;
+			color: white;
+			border: 2px solid white;
+			transition: 300ms;
+		}
+		.link-btn:hover{
+			background-color: white;
+			color: red;
+		}
+		.links-div{
+			margin: 10px;
+		}
+	</style>
+</head>
+<body class="red accent-4 white-text">
+	<div class="container">
+		<h1 class="text-center title-text">Redis Data Viewer</h1>
+		<p class="text-center">A gem that allows you to see redis data in your rails application...</p>
+		<div class="text-center links-div">
+			<a target="_blank" href="https://github.com/manjitborah2710/redis_data_viewer" class="link-btn">Github</a>
+			<a target="_blank" href="https://rubygems.org/gems/redis_data_viewer" class="link-btn">Rubygems</a>
+		</div>
+		<p class="white-text" id="instructions">Follow these steps to setup</p>
+		<div>
+			<ol>
+				<li>
+					<div class="container">
+						<p>Add this to your application's Gemfile</p>
+						<div class="card-panel red accent-3">gem 'redis_data_viewer'</div>
+						<p>and exeute</p>
+						<div class="card-panel red accent-3">bundle</div>
+						<p class="white-text">Or install it yourself</p>
+						<div class="card-panel red accent-3">$ gem install redis_data_viewer</div>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<p>Execute the following in your rails app root directory</p>
+						<div class="card-panel red accent-3">rails g redis_data_viewer install</div>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<p>Configure your redis server in <i>config/initializers/redis_data_viewer.rb</i></p>
+						<div class="card-panel red accent-3">
+							<script src="https://gist.github.com/manjitborah2710/80042165479c512c61d21984c25c6bf6.js"></script>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<p>Run your rails application and go to the path <i>/redis</i>. Enter the db and a key to search for and hit fetch</p>
+						<div class="card-panel red accent-3">
+							<img src="./images/sample.png" id="sample-img">
+						</div>
+					</div>
+				</li>
+			</ol>
+			
+		</div>
+	</div>
+
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
