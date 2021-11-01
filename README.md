@@ -1,5 +1,7 @@
 # RedisDataViewer
-Short description and motivation.
+A gem that lets you see redis data in your rails application. It helps you view the data in your redis in a readonly mode. This prevents accidental changes in your datastore.
+
+Visit the [Homepage](https://manjitborah2710.github.io/redis_data_viewer/)
 
 ## Usage
 How to use my plugin.
