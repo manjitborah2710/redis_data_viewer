@@ -4,6 +4,10 @@ Short description and motivation.
 ## Usage
 How to use my plugin.
 
+- Open you rails app and go to the path /redis. In the UI, enter the db and key to search for and hit fetch.
+
+!['image not found'](https://github.com/manjitborah2710/redis_data_viewer/blob/8783c45be6a7e5c0ff0683d2fb9d3f79953c6ca8/images/sample.png)
+
 ## Installation
 Add this line to your application's Gemfile:
 
@@ -21,6 +25,13 @@ Or install it yourself as:
 $ gem install redis_data_viewer
 ```
 
+Execute the following in your rails app root directory
+```bash
+rails g redis_data_viewer install
+```
+
+Visit this to get a sample configuration that needs to be added to config/initializers/redis_data_viewer.rb in your rails application
+https://gist.github.com/manjitborah2710/80042165479c512c61d21984c25c6bf6
 ## Contributing
 Contribution directions go here.
 
