@@ -20,6 +20,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'sqlite3'
 
   s.add_dependency 'rails', '>= 5.0'
-  s.add_dependency 'redis', '>= 4.2.0'
+  s.add_dependency 'redis', '>= 4.0'
   s.add_dependency 'jquery-rails'
 end
